@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieVerse</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>🎬 MovieVerse</h2>
+
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="favorites.html">Favorites ❤️</a></li>
+            <li><a href="toprated.html">⭐ Top Rated</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="login.html" id="loginLink">Login</a></li>
+            <li><a href="#" id="logoutLink" onclick="logout()" style="display:none;">Logout</a></li>
+            <li><a href="watchlist.html">📺 Watchlist</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Discover and Rate Your Favorite Movies</h1>
+        <p>Search thousands of movies and leave your own ratings.</p>
+
+        <button>Explore Movies</button>
+        <br><br>
+
+       <input
+    type="text"
+    id="searchInput"
+    placeholder="Search any movie..."
+    >
+
+<button onclick="searchOMDb()">
+    🔍 Search
+</button>
+
+    </section>
+
+    <section class="movies">
+
+    <h2>Search Results</h2>
+
+    <div id="searchResults" class="movie-container">
+
+    </div>
+
+</section>
+
+    <!-- Featured Movies -->
+    <section class="movies">
+
+        <h2>Featured Movies</h2>
+
+        <div class="movie-container">
+
+            <div class="movie-card">
+                <img src="images/interstellar.jpeg" alt="Interstellar">
+
+                <h3>Interstellar</h3>
+
+               <div class="stars">
+
+    <span onclick="rateMovie(this,1)">⭐</span>
+    <span onclick="rateMovie(this,2)">⭐</span>
+    <span onclick="rateMovie(this,3)">⭐</span>
+    <span onclick="rateMovie(this,4)">⭐</span>
+    <span onclick="rateMovie(this,5)">⭐</span>
+
+</div>
+
+<p class="rating-text">Click to Rate</p>
+
+
+<button onclick="showMovie('Interstellar')">
+    View Details
+</button>
+
+<button class="favorite-btn" onclick="toggleFavorite(this, 'Interstellar')">
+    🤍 Favorite
+</button>
+            </div>
+
+            <div class="movie-card">
+                <img src="images/inception.jpeg" alt="Inception">
+
+                <h3>Inception</h3>
+
+               <div class="stars">
+    <span onclick="rateMovie(this,1)">⭐</span>
+    <span onclick="rateMovie(this,2)">⭐</span>
+    <span onclick="rateMovie(this,3)">⭐</span>
+    <span onclick="rateMovie(this,4)">⭐</span>
+    <span onclick="rateMovie(this,5)">⭐</span>
+</div>
+
+<p class="rating-text">Click to Rate</p>
+
+<button onclick="showMovie('Inception')">
+    View Details
+</button>
+
+<button class="favorite-btn" onclick="toggleFavorite(this, 'Inception')">
+    🤍 Favorite
+</button>
+            </div>
+
+            <div class="movie-card">
+                <img src="images/dune.jpeg" alt="Dune">
+
+                <h3>Dune</h3>
+
+                <div class="stars">
+    <span onclick="rateMovie(this,1)">⭐</span>
+    <span onclick="rateMovie(this,2)">⭐</span>
+    <span onclick="rateMovie(this,3)">⭐</span>
+    <span onclick="rateMovie(this,4)">⭐</span>
+    <span onclick="rateMovie(this,5)">⭐</span>
+</div>
+
+<p class="rating-text">Click to Rate</p>
+
+<button onclick="showMovie('Dune')">
+    View Details
+</button>
+
+<button class="favorite-btn" onclick="toggleFavorite(this, 'Dune')">
+    🤍 Favorite
+</button>
+            </div>
+             <div class="movie-card">
+                <img src="images/closer.jpeg" alt="Closer">
+
+                <h3>Closer</h3>
+
+                <div class="stars">
+    <span onclick="rateMovie(this,1)">⭐</span>
+    <span onclick="rateMovie(this,2)">⭐</span>
+    <span onclick="rateMovie(this,3)">⭐</span>
+    <span onclick="rateMovie(this,4)">⭐</span>
+    <span onclick="rateMovie(this,5)">⭐</span>
+</div>
+
+<p class="rating-text">Click to Rate</p>
+
+<button onclick="showMovie('Closer')">
+    View Details
+</button>
+
+<button class="favorite-btn" onclick="toggleFavorite(this, 'Closer')">
+    🤍 Favorite
+</button>
+            </div>
+        </div>
+
+    </section>
+    <!-- Movie Details Modal -->
+
+<div id="movieModal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close" onclick="closeModal()">&times;</span>
+
+        <img id="modalPoster" src="" alt="Movie Poster">
+
+        <h2 id="modalTitle"></h2>
+
+        <p id="modalRating"></p>
+
+        <p id="modalGenre"></p>
+
+        <p id="modalDirector"></p>
+
+        <p id="modalYear"></p>
+
+        <p id="modalDescription"></p>
+
+    </div>
+
+</div>
+<button id="topBtn" onclick="scrollToTop()">⬆</button>
+<footer>
+    <p>© 2026 MovieVerse | Made by Shihij Kachroo</p>
+</footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

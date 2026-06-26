@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Login | MovieVerse</title>
+
+<link rel="stylesheet" href="styles.css">
+
+<style>
+
+body{
+    background:#111;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+.login-container{
+
+    width:400px;
+    margin:80px auto;
+    background:#222;
+    padding:35px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(255,215,0,.2);
+
+}
+
+.login-container h2{
+
+    color:gold;
+    margin-bottom:25px;
+
+}
+
+.login-container input{
+
+    width:100%;
+    padding:14px;
+    margin:10px 0;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+
+}
+
+.login-container button{
+
+    width:100%;
+    padding:14px;
+    background:gold;
+    border:none;
+    border-radius:8px;
+    font-size:17px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-top:15px;
+
+}
+
+.login-container button:hover{
+
+    background:white;
+
+}
+
+.toggle{
+
+    margin-top:20px;
+    color:white;
+
+}
+
+.toggle a{
+
+    color:gold;
+    cursor:pointer;
+    text-decoration:none;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>🎬 MovieVerse</h2>
+
+<ul>
+
+<li><a href="index.html">Home</a></li>
+<li><a href="favorites.html">Favorites</a></li>
+<li><a href="toprated.html">Top Rated</a></li>
+<li><a href="about.html">About</a></li>
+
+</ul>
+
+</nav>
+
+<div class="login-container">
+
+<h2 id="formTitle">Login</h2>
+
+<input
+type="text"
+id="name"
+placeholder="Full Name"
+style="display:none;"
+>
+
+<input
+type="email"
+id="email"
+placeholder="Email"
+>
+
+<input
+type="password"
+id="password"
+placeholder="Password"
+>
+
+<button onclick="submitForm()">
+Continue
+</button>
+
+<p class="toggle">
+
+<span id="toggleText">
+Don't have an account?
+</span>
+
+<a onclick="toggleForm()">
+Sign Up
+</a>
+
+</p>
+
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>
